@@ -1,6 +1,6 @@
 # ePlanningDemo
 
-This is a Scrapy project to scrape eplanning website and extract agent details from  http://quotes.toscrape.com.
+This is a Scrapy project to scrape eplanning website and extract agent details from  http://eplanning.ie/.
 
 This project is only meant for educational purposes.
 
