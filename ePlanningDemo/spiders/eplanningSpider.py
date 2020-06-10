@@ -38,11 +38,11 @@ class EplanningspiderSpider(scrapy.Spider):
         # visit all urls one by one
         for url in application_urls:
             url = response.urljoin(url)
-            yield Request(url, callback=self.parse_search_results)
+            yield Request(url, callback=self.parse_application_details)
         # extracting next page url
         next_page_url = response.xpath('//*[@rel="next"]/@href').extract_first()
         absolute_next_page_url = response.urljoin(next_page_url)
-        yield Request(absolute_next_page_url, callback=self.parse_application_details)
+        yield Request(absolute_next_page_url, callback=self.parse_search_results)
 
     def parse_application_details(self, response):
         # extract user agent data from table
